@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steam</title>
+    <style>
+        body{
+            background-color: rgb(15, 10, 85);
+        }
+        #nav{
+            width: 100%;
+            height: 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .navs{
+            width: auto;
+            height: 100%;
+            font-size: larger;
+            color: white;
+            font-weight: bolder;
+        }
+        .navs a{
+            text-decoration: none;
+            color: white;
+        }
+        #main{
+            width: 1200px;
+            height: 600px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            margin-top: 5%;
+            color: white;
+        }
+        .game_card{
+            width: 30%;
+            height: 10%;
+            text-align: center;
+        }
+        .game_card img{
+            width: 200px;
+            height: 100px;
+        }
+        #games{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div id="nav">
+            <div class="navs">
+                <a href="">Магазин</a>
+            </div>
+            <div class="navs">
+                <a href="">Библиотека</a>
+            </div>
+            <div class="navs">
+                <a href="">Сообщество</a>
+            </div>
+            <div class="navs">
+                <a href="">{ user.login }</a>
+            </div>
+            <div class="navs">
+                <a href="/games/about">О нас</a>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div id="main">
+            <p>Popular:</p>
+            <div id="games">
+                    <div class="game_card">
+                        <img src="data:image/png;base64,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" alt="" srcset="">
+                        CS:GO
+                    </div>  
+                    <div class="game_card">
+                        <img src="https://pbs.twimg.com/profile_images/1478893871199186945/1mA6tezL_400x400.jpg" alt="" srcset="">
+                        Dota 2
+                    </div>
+                    <div class="game_card">
+                        <img src="https://image.api.playstation.com/vulcan/coal-image-prod/cdn/molt/ALL/201905/MOLT2276_ZZ/rUhQGewc1LDM3PMCNg.png" alt="" srcset="">
+                        Outlast
+                    </div>
+                    <div class="game_card">
+                        <img src="https://images.gog-statics.com/409993ae05dfa48caa30943b3d2f97cd0f462e0da9fca81edff85cc6a957fe3d.jpg" alt="" srcset="">
+                        Outlast 2
+                    </div>
+                    <div class="game_card">
+                        <img src="https://assets-prd.ignimgs.com/2022/02/08/nfsunderground-sq-1644282923090.jpg" alt="" srcset="">
+                        Need for Speed Underground
+                    </div>
+                    <div class="game_card">
+                        <img src="https://static.wikia.nocookie.net/counterstrike/images/3/3c/Cs_1.6_background.png/revision/latest?cb=20140922174445&path-prefix=ru" alt="" srcset="">
+                        CS 1.6
+                    </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
